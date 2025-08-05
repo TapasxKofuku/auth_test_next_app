@@ -1,0 +1,19 @@
+import AppleSignIn from "@/components/AppleSignIn";
+import Image from "next/image";
+import { signIn } from "../../auth";
+
+export default function Home() {
+  return (
+    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
+     {/* <AppleSignIn/> */}
+      <form
+      action={async () => {
+        "use server"
+        await signIn("apple")
+      }}
+    >
+      <button type="submit">Signin with Apple</button>
+    </form>
+    </div>
+  );
+}

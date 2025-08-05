@@ -1,0 +1,52 @@
+GET http://localhost:8082
+
+###
+# @name CreateNewItem
+# POST request to create a new item on localhost:8082
+POST http://localhost:8082/get-ios-code
+Content-Type: application/json
+
+{
+  "code": "hello-world",
+  "redirectTo": "https://example.com/redirect"
+}
+###
+# @name GetIOSCode
+# POST request for iOS code, matching the server's validation schema
+###
+# @name GetIOSCode
+# POST request for iOS code, matching the server's validation schema
+POST http://localhost:8082/get-ios-code
+Content-Type: application/json
+
+{ 
+    "input":{
+         "code": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjUzMjJENzM2UlIifQ.eyJhdWQiOiJodHRwczovL2FwcGxlaWQuYXBwbGUuY29tIiwiaXNzIjoiY29tLmtvZnVrdS5rb2Z1a3UiLCJpYXQiOjE3NTQzMDkzNzEsImV4cCI6MTc2OTg2MTM3Miwic3ViIjoiWjU2NDNTRlY3SCJ9.Qf8RJsDjw0JcPouut1y-i_21xPIC0bz_K8rJkW9Quwnpjg2R-K9-Yu0FvPCtJJ51lSe2VQxOFcoIxxqqUjDV-g",
+        "redirectTo": "https://staging-fe.kofuku.com/callback/google/apple"
+    }
+}
+
+###
+# @name GetIOSCode
+# POST request for iOS code, matching the server's validation schema
+POST http://localhost:8082/login-ios
+Content-Type: application/json
+
+{ 
+    "input":{
+        "redirectTo": "https://staging-fe.kofuku.com/callback/apple"
+    }
+}
+
+###
+# @name GetGoogleCode
+# POST request for iOS code, matching the server's validation schema
+POST http://localhost:8082/login-ios
+Content-Type: application/json
+
+{ 
+    "input":{
+        "redirectTo": "http://localhost:3000/callback/apple"
+    }
+}
+
