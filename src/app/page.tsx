@@ -1,5 +1,4 @@
-import AppleSignIn from "@/components/AppleSignIn";
-import Image from "next/image";
+
 import { signIn } from "../../auth";
 
 export default function Home() {
