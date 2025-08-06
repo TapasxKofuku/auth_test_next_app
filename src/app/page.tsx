@@ -8,7 +8,7 @@ export default function Home() {
       <form
       action={async () => {
         "use server"
-        const res = await signIn("apple")
+        const res = await signIn("apple", { redirectTo: "/dashboard" })
         console.log("res", res);
         
       }}
